@@ -1,3 +1,12 @@
+import {Link as LinkScroll } from 'react-scroll'
+const  NavLink = ({title}) => {
+   return ( <LinkScroll className='base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1
+   max-lg:my-4 max-lg:h5'> 
+    {title}
+    </LinkScroll>)
+
+}
+
 const Header =() => {
     return (
          <header className='fixed top-0 left-0 z-50 w-full py-10'> 
@@ -5,11 +14,25 @@ const Header =() => {
                 <a className='lg:hidden flex-1 cursor-pointer z-2'> 
                     <img className="w-10 h-10 width={115} height=[55}" src='f.png' alt='Logo'/>
                 </a>
-                <div className='w-full border-2 border-amber-400'>
+                <div className='w-full max-lg:relative max-lg:flex mx-lg:c'>
                     <nav> 
                         <ul className='flex max-lg:block max-lg:px-12'> 
-                            <li>
-                                
+                            <li className='nav-li'>
+                                <NavLink title ="feature"/>gir 
+                                <div className='dot'/>  
+     
+                              <NavLink title="pricing"/>
+                            </li>
+                            <li> 
+                                <LinkScroll>
+                                <img  width={160} height={55} src='f.png'/>
+                                </LinkScroll>
+                            </li>
+                            <li className='nav-li'>
+
+                                <NavLink title="fq"/>
+                                <div className='dot'/>
+                                <NavLink title="download"/>
                             </li>
                         </ul>
                     </nav>
